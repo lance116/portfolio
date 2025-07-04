@@ -8,6 +8,23 @@ import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
+const tagToIcon: { [key: string]: string } = {
+  "React": "devicon-react-original",
+  "Node.js": "devicon-nodejs-plain",
+  "Python": "devicon-python-plain",
+  "TensorFlow": "devicon-tensorflow-original",
+  "Next.js": "devicon-nextjs-original",
+  "TypeScript": "devicon-typescript-plain",
+  "JavaScript": "devicon-javascript-plain",
+  "HTML5": "devicon-html5-plain",
+  "CSS3": "devicon-css3-plain",
+  "Java": "devicon-java-plain",
+  "Tailwind CSS": "devicon-tailwindcss-plain",
+  "PyTorch": "devicon-pytorch-original",
+  "NumPy": "devicon-numpy-original",
+  "Express.js": "devicon-express-original",
+};
+
 interface Project {
   id: string
   title: string
@@ -67,11 +84,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <p className="text-gray-400 mb-4 line-clamp-2">{project.description}</p>
 
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-blue-600/20 text-blue-400 border-blue-500/30">
-                {tag}
-              </Badge>
-            ))}
+            {project.tags.map((tag) => {
+              const iconClass = tagToIcon[tag]
+              return (
+                <Badge key={tag} variant="secondary" className="bg-blue-600/20 text-blue-400 border-blue-500/30 flex items-center gap-1.5 pr-2.5 pl-2 py-1">
+                  {iconClass && <i className={`${iconClass} text-base`}></i>}
+                  <span className="text-xs">{tag}</span>
+                </Badge>
+              )
+            })}
           </div>
 
           <Button variant="ghost" className="w-full text-blue-400 hover:text-white hover:bg-blue-600/20" asChild>

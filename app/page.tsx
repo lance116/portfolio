@@ -10,7 +10,6 @@ import { ExperienceTimeline } from "@/components/experience-timeline"
 import { ContactForm } from "@/components/contact-form"
 import { HeroEffects } from "@/components/hero-effects"
 import { TypewriterEffect } from "@/components/typewriter-effect"
-import { SkillsMarquee } from "@/components/skills-marquee"
 
 export default function Portfolio() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -32,29 +31,48 @@ export default function Portfolio() {
     return () => window.removeEventListener("mousemove", handleMouseMove)
   }, [])
 
+  const languages = [
+    { name: "Python", icon: "devicon-python-original" },
+    { name: "JavaScript", icon: "devicon-javascript-original" },
+    { name: "TypeScript", icon: "devicon-typescript-original" },
+    { name: "HTML5", icon: "devicon-html5-original" },
+    { name: "CSS3", icon: "devicon-css3-original" },
+    { name: "Java", icon: "devicon-java-original" },
+  ];
+
+  const frameworksAndTools = [
+    { name: "React", icon: "devicon-react-original" },
+    { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain" },
+    { name: "PyTorch", icon: "devicon-pytorch-original" },
+    { name: "TensorFlow", icon: "devicon-tensorflow-original" },
+    { name: "NumPy", icon: "devicon-numpy-original" },
+    { name: "Next.js", icon: "devicon-nextjs-original" },
+    { name: "Express", icon: "devicon-express-original" },
+  ];
+
   const projects = [
     {
-      id: "quantum-encryption",
-      title: "Quantum-Safe File Transfer",
-      description: "End-to-end encrypted document sharing with post-quantum cryptography",
+      id: "data-visualization-dashboard",
+      title: "Data Visualization Dashboard",
+      description: "An interactive dashboard for visualizing complex datasets, built with Next.js and Matplotlib.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["React", "Node.js", "Cryptography", "WebRTC"],
+      tags: ["Next.js", "React", "Python", "Matplotlib"],
       featured: true,
     },
     {
-      id: "chess-neural-network",
-      title: "Chess Neural Network",
-      description: "Deep learning model that achieved 1800+ ELO rating",
+      id: "pytorch-image-classifier",
+      title: "PyTorch Image Classifier",
+      description: "A deep learning model for image classification, trained on a custom dataset using PyTorch.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Python", "TensorFlow", "Neural Networks", "Game AI"],
+      tags: ["Python", "PyTorch", "NumPy"],
       featured: true,
     },
     {
-      id: "portfolio-website",
-      title: "Interactive Portfolio",
-      description: "This very website - built with Next.js and Three.js",
+      id: "express-api-server",
+      title: "Express.js API Server",
+      description: "A RESTful API server built with Express.js and TypeScript, providing data to a React frontend.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Next.js", "Three.js", "Framer Motion", "TypeScript"],
+      tags: ["Express.js", "TypeScript", "React", "Node.js"],
       featured: true,
     },
   ]
@@ -313,7 +331,7 @@ export default function Portfolio() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="max-w-6xl mx-auto px-6">
-          <motion.div variants={itemVariants} className="text-center mb-20">
+          <motion.div variants={itemVariants} className="text-center mb-28">
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
               About Me
             </h2>
@@ -326,26 +344,32 @@ export default function Portfolio() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <SkillsMarquee />
+            <h3 className="text-3xl font-bold text-center mb-12 text-white">Frameworks & Tools</h3>
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-8">
+              {frameworksAndTools.map((skill) => (
+                <div key={skill.name} className="flex flex-col items-center gap-3 group">
+                  <i className={`${skill.icon} text-5xl transition-transform duration-300 group-hover:scale-110`}></i>
+                  <span className="text-sm text-gray-400">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-3xl font-bold text-center mt-20 mb-12 text-white">Languages</h3>
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-8">
+              {languages.map((skill) => (
+                <div key={skill.name} className="flex flex-col items-center gap-3 group">
+                  <i className={`${skill.icon} text-5xl transition-transform duration-300 group-hover:scale-110`}></i>
+                  <span className="text-sm text-gray-400">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
-            {[
-              { icon: Code, label: "Years Experience", value: "3+" },
-              { icon: Brain, label: "Projects Built", value: "25+" },
-              { icon: Users, label: "Users Impacted", value: "10K+" },
-              { icon: Award, label: "Hackathons Won", value: "5" },
-            ].map(({ icon: Icon, label, value }) => (
-              <div key={label} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 mb-4">
-                  <Icon className="h-8 w-8 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{value}</div>
-                <div className="text-gray-400">{label}</div>
-              </div>
-            ))}
-          </motion.div>
+          {/* Stats - REMOVED */}
         </div>
       </motion.section>
 
