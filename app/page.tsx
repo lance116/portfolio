@@ -249,7 +249,7 @@ export default function Portfolio() {
             className="flex justify-center gap-6 mt-12"
           >
             {[
-              { icon: Github, href: "https://github.com/lanceyan", label: "GitHub" },
+              { icon: Github, href: "https://github.com/lance116", label: "GitHub" },
               { icon: Linkedin, href: "https://linkedin.com/in/lanceyan", label: "LinkedIn" },
               { icon: Mail, href: "mailto:lance@example.com", label: "Email" },
             ].map(({ icon: Icon, href, label }, index) => (
@@ -427,9 +427,9 @@ export default function Portfolio() {
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
               <div className="space-y-4">
                 {[
-                  { icon: Mail, label: "lance@example.com", href: "mailto:lance@example.com" },
-                  { icon: Linkedin, href: "https://linkedin.com/in/lanceyan", label: "linkedin.com/in/lanceyan" },
-                  { icon: Github, href: "https://github.com/lanceyan", label: "github.com/lanceyan" },
+                  { icon: Mail, label: "lance.yan@uwaterloo.ca", href: "mailto:lance.yan@uwaterloo.ca" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/lance-yan/", label: "linkedin.com/in/lance-yan" },
+                  { icon: Github, href: "https://github.com/lance116", label: "github.com/lance116" },
                 ].map(({ icon: Icon, label, href }) => (
                   <motion.a
                     key={label}
