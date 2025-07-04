@@ -196,8 +196,6 @@ export default function Portfolio() {
             <span className="bg-gradient-to-r from-white via-blue-100 to-blue-400 bg-clip-text text-transparent drop-shadow-2xl">
               Lance Yan
             </span>
-            {/* Glow effect behind text */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 blur-3xl -z-10 scale-110" />
           </motion.h1>
 
           {/* Dynamic Typewriter Tagline */}
