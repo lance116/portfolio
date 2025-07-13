@@ -60,11 +60,11 @@ export default function Portfolio() {
       featured: true,
     },
     {
-      id: "pytorch-image-classifier",
-      title: "PyTorch Image Classifier",
-      description: "A deep learning model for image classification, trained on a custom dataset using PyTorch.",
+      id: "chess-neural-network",
+      title: "Chess Neural Network",
+      description: "An intelligent chess engine powered by deep learning, analyzing board positions with TensorFlow.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Python", "PyTorch", "NumPy"],
+      tags: ["Python", "TensorFlow", "Matplotlib"],
       featured: true,
     },
     {
