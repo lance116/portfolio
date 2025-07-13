@@ -52,11 +52,11 @@ export default function Portfolio() {
 
   const projects = [
     {
-      id: "data-visualization-dashboard",
-      title: "Data Visualization Dashboard",
-      description: "An interactive dashboard for visualizing complex datasets, built with Next.js and Matplotlib.",
+      id: "period-tracker-app",
+      title: "Period Tracker App",
+      description: "A privacy-focused period tracking app with AI-powered health insights using Google Gemini.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Next.js", "React", "Python", "Matplotlib"],
+      tags: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
       featured: true,
     },
     {

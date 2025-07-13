@@ -56,7 +56,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             alt={project.title}
             width={500}
             height={300}
-            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+            className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -77,13 +77,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </div>
 
-        <div className="p-6 flex-1 flex flex-col">
+        <div className="p-8 flex-1 flex flex-col">
           <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
             {project.title}
           </h3>
-          <p className="text-gray-400 mb-4 line-clamp-2">{project.description}</p>
+          <p className="text-gray-400 mb-6 line-clamp-3">{project.description}</p>
 
-          <div className="flex flex-wrap gap-2 mb-4 flex-1">
+          <div className="flex flex-wrap gap-2 mb-6 flex-1">
             {project.tags.map((tag) => {
               const iconClass = tagToIcon[tag]
               return (
