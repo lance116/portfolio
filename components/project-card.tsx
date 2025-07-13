@@ -96,7 +96,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           <Button variant="ghost" className="w-full text-blue-400 hover:text-white hover:bg-blue-600/20 mt-auto" asChild>
-            <Link href={`/projects/${project.id}`}>View Case Study →</Link>
+            <Link href={`/projects/${project.id}`}>
+              <Github className="h-4 w-4 mr-2" />
+              View GitHub Repository →
+            </Link>
           </Button>
         </div>
       </Card>
