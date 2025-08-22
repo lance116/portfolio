@@ -434,8 +434,7 @@ export default function Portfolio() {
               Let's Build Something Amazing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Whether you're looking for a technical co-founder, a skilled engineer, or just want to chat about the
-              future of technology.
+              Whether you're looking for a technical co-founder, a skilled engineer, or just want to chat.
             </p>
           </motion.div>
 
