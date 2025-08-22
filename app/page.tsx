@@ -71,7 +71,7 @@ export default function Portfolio() {
       id: "portfolio-website",
       title: "This Website!",
       description: "A modern, responsive portfolio website built with Next.js 14, featuring smooth animations and interactive 3D elements.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/portfoliowebsitescreenshot.png",
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"],
       featured: true,
     },
