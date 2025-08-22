@@ -81,7 +81,7 @@ export default function Portfolio() {
     {
       role: "Founding Engineer",
       company: "Stealth AI Startup",
-      location: "San Francisco, CA",
+      location: "Toronto, ON, Canada",
       period: "2024 - Present",
       description: "Building next-generation AI tools for enterprise automation",
       achievements: [
@@ -266,8 +266,8 @@ export default function Portfolio() {
           >
             {[
               { icon: Github, href: "https://github.com/lance116", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com/in/lanceyan", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:lance@example.com", label: "Email" },
+              { icon: Linkedin, href: "https://linkedin.com/in/lance-yan", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:lance.yan@uwaterloo.ca", label: "Email" },
             ].map(({ icon: Icon, href, label }, index) => (
               <motion.a
                 key={label}
@@ -334,8 +334,8 @@ export default function Portfolio() {
               About Me
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              I'm a Computer Science student at the University of Waterloo with a passion for building elegant, scalable
-              tools that solve real problems. My experience spans frontend development, AI research, and startup
+              I'm a Computer Science student at the University of Waterloo with a passion for building elegant and scalable
+              tools. My experience spans frontend development, AI research, and startup
               engineering, where I've learned to balance technical excellence with user-centric design. I thrive in
               environments where innovation meets execution.
             </p>
@@ -482,7 +482,7 @@ export default function Portfolio() {
       <footer className="py-12 border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} Lance Yan. Built with Next.js, Three.js, and lots of ☕
+            © {new Date().getFullYear()} Lance Yan. Built with lots of ☕
           </p>
         </div>
       </footer>
