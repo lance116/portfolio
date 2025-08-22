@@ -250,7 +250,7 @@ export default function Portfolio() {
                 className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black px-8 py-4 text-lg font-semibold transition-all duration-300 bg-transparent backdrop-blur-sm relative overflow-hidden group"
               >
                 <Download className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                <span>Download Résumé</span>
+                <span>Resume Soon!</span>
                 {/* Hover glow */}
                 <div className="absolute inset-0 rounded-full bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
