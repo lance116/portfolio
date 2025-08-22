@@ -32,6 +32,8 @@ interface Project {
   image: string
   tags: string[]
   featured: boolean
+  demoUrl?: string
+  githubUrl?: string
 }
 
 interface ProjectCardProps {
@@ -62,18 +64,27 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           {/* Hover overlay with buttons */}
           <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Button
-              size="sm"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black bg-transparent"
-            >
-              <Github className="h-4 w-4 mr-2" />
-              Code
-            </Button>
-            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-              <ExternalLink className="h-4 w-4 mr-2" />
-              Demo
-            </Button>
+            {project.githubUrl && (
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-black bg-transparent"
+                asChild
+              >
+                <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Github className="h-4 w-4 mr-2" />
+                  Code
+                </Link>
+              </Button>
+            )}
+            {project.demoUrl && (
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700" asChild>
+                <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Demo
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
 
@@ -96,7 +107,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           <Button variant="ghost" className="w-full text-blue-400 hover:text-white hover:bg-blue-600/20 mt-auto" asChild>
-            <Link href={project.id === "period-tracker-app" ? "https://github.com/lance116/period-tracker" : project.id === "chess-neural-network" ? "https://github.com/lance116/Chess-Neural-Network" : `/projects/${project.id}`} target="_blank" rel="noopener noreferrer">
+            <Link 
+              href={project.githubUrl || (project.id === "period-tracker-app" ? "https://github.com/lance116/period-tracker" : project.id === "chess-neural-network" ? "https://github.com/lance116/Chess-Neural-Network" : `/projects/${project.id}`)} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <Github className="h-4 w-4 mr-2" />
               View GitHub Repository →
             </Link>

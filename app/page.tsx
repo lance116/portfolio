@@ -55,9 +55,11 @@ export default function Portfolio() {
       id: "period-tracker-app",
       title: "AI Period Tracker App",
       description: "A privacy-focused period tracking app with AI-powered health insights using Google Gemini.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/aiperiodtracker.png",
       tags: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Gemini API"],
       featured: true,
+      demoUrl: "https://perica-ten.vercel.app/",
+      githubUrl: "https://github.com/lance116/period-tracker",
     },
     {
       id: "chess-neural-network",
