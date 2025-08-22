@@ -53,10 +53,10 @@ export default function Portfolio() {
   const projects = [
     {
       id: "period-tracker-app",
-      title: "Period Tracker App",
+      title: "AI Period Tracker App",
       description: "A privacy-focused period tracking app with AI-powered health insights using Google Gemini.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
+      tags: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Gemini API"],
       featured: true,
     },
     {
@@ -68,11 +68,11 @@ export default function Portfolio() {
       featured: true,
     },
     {
-      id: "express-api-server",
-      title: "Express.js API Server",
-      description: "A RESTful API server built with Express.js and TypeScript, providing data to a React frontend.",
+      id: "portfolio-website",
+      title: "This Website!",
+      description: "A modern, responsive portfolio website built with Next.js 14, featuring smooth animations and interactive 3D elements.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Express.js", "TypeScript", "React", "Node.js"],
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"],
       featured: true,
     },
   ]
